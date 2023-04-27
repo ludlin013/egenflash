@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/index.css">
+    <title>Kryptera meddelande</title>
+  </head>
+  <body>
+    <div>
+      <img src="static/ecit.svg" width="200px">
+    </div>
+    <form action="/encrypt" method="post">
+      <textarea name="message" id="messagearea" cols="50" rows="8" spellcheck="false"></textarea>
+
+      <input id="encryptbutton" type="submit" value="Kryptera meddelande">
+    </form>
+    
+    {% for x in templates %}
+      <div class="templates" onclick="document.getElementById('messagearea').value = '{{templates[x]}}'">
+        <b class="templatetitle">{{x}}</b>
+        <p class="templatetext">{{templates[x].replace("\\n","\n")}}</p>
+      </div>
+    {% endfor %}
+
+  </body>
+</html>
