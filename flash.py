@@ -57,7 +57,7 @@ def view():
 
     if os.path.isfile(os.path.join("static","messages",file)):
         os.remove(os.path.join("static","messages",file))
-        message = fernet.decrypt(file).decode()
+        message = fernet.decrypt(file.encode()).decode()
     
         
     return render_template("view.html",message=message)
