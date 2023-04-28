@@ -21,7 +21,7 @@ def index():
             content = f.read()
         templates[x] = content.replace("\n", "\\n")
 
-    print(templates)
+    # print(templates)
 
     return render_template("index.html", templates=templates)
 
@@ -35,7 +35,7 @@ def encrypt():
     with open(os.path.join("static", "messages", encrypt.decode()), "w") as f:
         f.write("")
 
-    link = "/message?file=" + encrypt.decode()
+    link = "pw.ecitpro.se/message?file=" + encrypt.decode()
 
     return render_template("encrypt.html", link=link)
 
