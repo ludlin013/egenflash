@@ -35,7 +35,7 @@ def encrypt():
     with open(os.path.join("static", "messages", encrypt.decode()), "w") as f:
         f.write("")
 
-    link = "pw.ecitpro.se/message?file=" + encrypt.decode()
+    link = "http://pw.ecitpro.se/message?file=" + encrypt.decode()
 
     return render_template("encrypt.html", link=link)
 
