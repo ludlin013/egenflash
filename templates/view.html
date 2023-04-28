@@ -7,10 +7,15 @@
     <title>Krypterat meddelande</title>
   </head>
   <body>
+    
+    <div>
+      <img src="static/ecit.svg" width="200px">
+    </div>
+    <div>
     {% if message %}
     <p id="viewm">{{message.replace("\\n","\n")}}</p>
     {% endif %}
-
+  </div>
     <a href="/">Tillbaka till start</a>
   </body>
 </html>
