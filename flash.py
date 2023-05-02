@@ -35,7 +35,7 @@ def encrypt():
     with open(os.path.join("static", "messages", encrypt.decode()), "w") as f:
         f.write("")
 
-    link = "http://pw.ecitpro.se/message?file=" + encrypt.decode()
+    link = "https://pw.ecitpro.se/message?file=" + encrypt.decode()
 
     return render_template("encrypt.html", link=link)
 
@@ -61,5 +61,12 @@ def view():
 
 
 if __name__ == "__main__":
-    # app.run(host="0.0.0.0", port="8080")
-    serve(app, host="0.0.0.0", port=8080)
+    app.run(
+        host="0.0.0.0",
+        port="443",
+        ssl_context=(
+            "/etc/letsencrypt/live/pw.ecitpro.se/fullchain.pem",
+            "/etc/letsencrypt/live/pw.ecitpro.se/privkey.pem",
+        ),
+    )
+    # serve(app, host="0.0.0.0", port=8080)
