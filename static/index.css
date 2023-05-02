@@ -84,3 +84,19 @@ form {
     border-radius: 5px;
     padding:10px
 }
+
+
+@media only screen and (max-width: 700px) {
+  #messagearea{
+    width:90vw
+  }
+
+  .templates{
+    width:90vw
+  }
+
+  .removalmsg {
+    text-align: center;
+    
+  }
+}
