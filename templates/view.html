@@ -12,11 +12,12 @@
     <div>
       <img src="static/ecit.svg" width="200px">
     </div>
-    <div>
+    
     {% if message %}
-    <p id="viewm">{{message.replace("\\n","\n")}}</p>
+      <div class="viewbox">
+        <p id="viewm">{{message.replace("\\n","\n")}}</p>
+      </div>
     {% endif %}
-  </div>
     <!--<a href="/">Tillbaka till start</a>-->
   </body>
 </html>

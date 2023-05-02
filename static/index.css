@@ -27,7 +27,7 @@ form {
     resize: none;
 }
 
-#encryptbutton, #linkbutton {
+#encryptbutton, #linkbutton, .showmsg {
     margin: 10px;
     padding: 10px;
     cursor:pointer;
@@ -37,6 +37,7 @@ form {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    text-decoration: none;
 }
 
 .templates{
@@ -76,4 +77,10 @@ form {
 .highlight {
     background: #0082ea !important;
     transition-duration: .2s !important;
+}
+
+.viewbox{
+    border:1px solid #002e52;
+    border-radius: 5px;
+    padding:10px
 }
