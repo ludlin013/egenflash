@@ -30,6 +30,9 @@ def index():
 def encrypt():
     message = request.form["message"]
 
+    if message == "":
+        return redirect("/")
+
     encrypt = fernet.encrypt(message.encode())
 
     with open(os.path.join("static", "messages", encrypt.decode()), "w") as f:

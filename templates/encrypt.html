@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/static/ecit.svg">
-    <link rel="stylesheet" href="static/index.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/static/ecit.svg" />
+    <link rel="stylesheet" href="static/index.css" />
     <title>Krypterat meddelande</title>
     <script>
+      document.getElementById("link").focus();
 
-      function removeclass(){
-        document.getElementById("linkbutton").classList.remove("highlight")
+      function removeclass() {
+        document.getElementById("linkbutton").classList.remove("highlight");
       }
 
-      function copy(link){
+      function copy(link) {
         console.log(link);
 
         navigator.clipboard.writeText(link);
 
-
-        document.getElementById("linkbutton").classList.add("highlight")
-        setTimeout(function(){removeclass()},200)
-
+        document.getElementById("linkbutton").classList.add("highlight");
+        setTimeout(function () {
+          removeclass();
+        }, 200);
       }
     </script>
   </head>
   <body>
-    
     <div>
-      <img src="static/ecit.svg" width="200px">
+      <img src="static/ecit.svg" width="200px" />
     </div>
-    
+
     <a id="link" href="{{link}}">Länk till meddelande</a>
 
     <button id="linkbutton" onclick="copy('{{link}}')">Kopiera länk</button>
