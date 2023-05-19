@@ -16,6 +16,8 @@
     <div class="viewbox">
       <p id="viewm">{{message.replace("\\n","\n")}}</p>
     </div>
+    {% else %}
+    <p id="viewm">Meddelandet är inte tillgängligt</p>
     {% endif %}
     <!--<a href="/">Tillbaka till start</a>-->
   </body>
